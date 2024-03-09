@@ -20,12 +20,14 @@ void do_foo_to_bar(instance_data_t *data);
 void do_bar_to_initial(instance_data_t *data);
 void do_bar_to_foo(instance_data_t *data);
 void do_bar_to_bar(instance_data_t *data);
+void do_bar_to_end(instance_data_t *data);
+void do_end_to_end(instance_data_t *data);
 
 static transition_func_t * const transition_table[NUM_STATES][NUM_STATES] = {
 	{ NULL,              do_initial_to_foo, NULL, NULL },
 	{ NULL,              NULL,              do_foo_to_bar, NULL },
-	{ do_bar_to_initial, do_bar_to_foo,     do_bar_to_bar, NULL },
-	{ do_bar_to_initial, do_bar_to_foo,     do_bar_to_bar, NULL }
+	{ do_bar_to_initial, do_bar_to_foo,     do_bar_to_bar, do_bar_to_end },
+	{ NULL, NULL,     do_end_to_end, NULL }
 };
 
 state_t do_state_initial(instance_data_t *data);
