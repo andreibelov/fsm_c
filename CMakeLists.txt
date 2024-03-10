@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    CMakeLists.txt                                     :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abelov <abelov@student.42london.com>       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/03/10 00:23:17 by abelov            #+#    #+#              #
+#    Updated: 2024/03/10 00:23:22 by abelov           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 cmake_minimum_required(VERSION 3.8.2)
 
 project(42 LANGUAGES C)
@@ -28,3 +40,5 @@ add_custom_command(TARGET fclean POST_BUILD
 
 add_subdirectory(fsm)
 add_subdirectory(fsm1)
+add_subdirectory(fsm2)
+add_subdirectory(fsm3)
